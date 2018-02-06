@@ -66,6 +66,7 @@ function makeGraphs(error, donorsUSProjects) {
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
     var fundingStatusChart = dc.pieChart("#funding-chart");
     var selectField = dc.selectMenu('#menu-select');
+    var usChart = dc.geoChoroplethChart("#us-chart");
 
 
     selectField
@@ -126,7 +127,6 @@ function makeGraphs(error, donorsUSProjects) {
         .transitionDuration(1500)
         .dimension(fundingStatus)
         .group(numProjectsByFundingStatus);
-
-
+        
     dc.renderAll();
 }
