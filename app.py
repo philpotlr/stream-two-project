@@ -25,6 +25,10 @@ def about():
 def data():
     return render_template("data.html")
 
+@app.route("/contact")
+def data():
+    return render_template("contact.html")    
+
 
 @app.route("/donorsUS/projects")
 def donor_projects():
